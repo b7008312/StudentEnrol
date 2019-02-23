@@ -3,7 +3,7 @@ package com.enrol
 class Course {
 String department
 String courseTitle
-String courseLeader
+Lecturer courseLeader
 String courseCode 
 Date startDate 
 Date endDate
@@ -11,6 +11,10 @@ String description
 int numberOfStudents
 double tuitionFees
 String studyMode
+static hasMany=[lecturers:Lecturer, students:Student, modules:Module]
+String toString(){
+return courseTitle
+}
 
     static constraints = {
 courseTitle nullable:false

@@ -7,6 +7,12 @@ String subject
 String lecturerEmail
 String office
 String bio
+Course theCourse
+static hasMany=[modules:Module, courses:Course]
+static belongsTo=[Course]
+String toString(){
+return fullName
+}
     static constraints = {
 fullName nullable:false
 fullName blank:false
@@ -21,7 +27,8 @@ office nullable:false
 office blank:false
 bio nullable:false
 bio blank:false
-
+theCourse nullable:true
+theCourse blank:true
 
 
     }
